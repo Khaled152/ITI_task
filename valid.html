@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-3.2.1.slim.js"></script>
+    <script src="js/proper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/mannualjs.js"></script>
+    <link rel="stylesheet" a href="css/bootstrap.css">
+    <link rel="stylesheet" a href="css/fonts.css">
+    <title>Signup Form for Registration</title>
+<script type="text/javascript">
+    function myfun()
+{
+    var UserName=document.getElementById('UName').value;
+    var UserEmail=document.getElementById('UEmail').value;
+    var UPass=document.getElementById('UPass').value;
+    var UCPass=document.getElementById('UCPass').value;
+
+    if(UserName=="")
+    {
+        document.getElementById('UBlank').innerHTML="Please Enter the User Name";
+    }
+    else if (UserName!="")
+    {
+        document.getElementById('UBlank').innerHTML="";
+    }
+    if(UserEmail=="")
+    {
+        document.getElementById('EmailBlank').innerHTML="Please Enter Ur Email";
+    }
+    else if (UserEmail!="")
+    {
+        document.getElementById('EmailBlank').innerHTML="";
+    }
+
+    if(UPass=="")
+    {
+        document.getElementById('PassBlank').innerHTML="Please Enter UR Password";
+    }
+    else if(UPass!="")
+    {
+        document.getElementById('PassBlank').innerHTML="";
+    }
+
+    if(UCPass=="")
+    {
+        document.getElementById('PassCBlank').innerHTML="Please Enter Confirm Pass";
+    }
+    else if(UCPass!="")
+    {
+        document.getElementById('PassCBlank').innerHTML="";
+    }
+
+    if(UPass!=UCPass)
+    {
+        document.getElementById('PassCBlank').innerHTML="Please Enter Confirm Password"
+    }
+    else if(UserName!="" && UserEmail!="" && UPass!="" && UCPass!="")
+    {
+        document.getElementById('Success').innerHTML=" You Have Successfully Register";
+        window.location=('https://www.onlineittuts.com');
+    }
+}
+</script>
+</head>
+<body>
+ 
+    <div class="container">
+ 
+        <div class="col-md-6 mx-auto mt-5 text-white">
+        <div class="card bg-dark p-3">
+ 
+            <h3>Signup Form For Registration</h3>
+            <p>Fill in the Blanks For Registration</p>
+            <input type="text" id="UName" class="form-control" placeholder="User Name">
+            <div id="UBlank" class="bg-danger text-white my-2 pl-2"></div>
+            <input type="text" id="UEmail" class="form-control" placeholder="User Email">
+            <div id="EmailBlank" class="bg-danger text-white my-2 pl-2"></div>
+            <input type="text" id="UPass" class="form-control" placeholder="User Pass">
+            <div id="PassBlank" class="bg-danger text-white my-2 pl-2"></div>
+            <input type="text" id="UCPass" class="form-control" placeholder="User Confirm Password">
+            <div id="PassCBlank" class="bg-danger text-white my-2 pl-2"></div>
+            <button class="btn btn-success" onclick="myfun();">Submit</button>
+ 
+          <div class="bg-success text-white pl-2 mt-2" id="Success"></div>
+        </div>
+    </div>
+    </div>
+        
+</body>
+</html>
